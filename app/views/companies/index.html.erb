@@ -2,8 +2,20 @@ index.html.erb
 
   <h1>Companies - <%= Company.count %></h1>
 
+<%= link_to "Create New", new_company_path, class: "btn btn-primary btn-lg" %>
 
-<% @companies.each do |company| %>
-    <h6> <%= company.name %> - <%= company.industry %></h6>
 
+<div class="flex-container3">
+  <% @companies.each do |company| %>
+  <div class="card-product2">
+    <h6><%= company.name %></h6>
+     <%= link_to company_path(company) do %>
+     <div class="card-product-infos">
+      <h2><%= company.name %></h2>
+      <p><%= company.industry %> </p>
+    </div>
     <% end %>
+  </div>
+  <% end %>
+</div>
+
