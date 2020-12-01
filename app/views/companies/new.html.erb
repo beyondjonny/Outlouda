@@ -1,0 +1,9 @@
+new.html.erb
+
+
+  <%= simple_form_for [@user, @company] do |f| %>
+      <%= f.input :name, placeholder: "Company" %>
+      <%= f.input :industry, placeholder: "Technology"%>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: "btn btn-primary"%>
+  <% end %>

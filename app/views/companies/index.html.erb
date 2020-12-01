@@ -1,0 +1,9 @@
+index.html.erb
+
+  <h1>Companies - <%= Company.count %></h1>
+
+
+<% @companies.each do |company| %>
+    <h6> <%= company.name %> - <%= company.industry %></h6>
+
+    <% end %>
