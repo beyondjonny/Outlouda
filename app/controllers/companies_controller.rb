@@ -18,7 +18,7 @@ class CompaniesController < ApplicationController
 
   def show
     @company = Company.find(params[:id])
-    # @question = Question.new
+    @question = Question.new
   end
 
   def destroy
